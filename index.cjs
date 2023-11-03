@@ -1,5 +1,10 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+
+
+// Utiliser le middleware CORS
+app.use(cors());
 
 // Middleware pour parser le corps des requêtes
 app.use(express.json());
