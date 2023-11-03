@@ -6,7 +6,7 @@
   ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/api/(.*)", "dest": "/index.cjs" },
+      { "src": "/api", "methods": ["POST"], "dest": "/index.cjs" },
     { "src": "/(.*)", "dest": "/index.cjs" },
     { "src": "/data(.*)", "dest": "/data.json" }
   ]
