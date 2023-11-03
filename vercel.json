@@ -1,13 +1,11 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.cjs", "use": "@vercel/node" },
-    { "src": "data.json", "use": "@vercel/static" }
+    { "src": "index.cjs", "use": "@vercel/node" }
   ],
   "routes": [
     { "handle": "filesystem" },
       { "src": "/api", "methods": ["POST"], "dest": "/index.cjs" },
-    { "src": "/(.*)", "dest": "/index.cjs" },
-    { "src": "/data(.*)", "dest": "/data.json" }
+    { "src": "/(.*)", "dest": "/index.cjs" }
   ]
 }
